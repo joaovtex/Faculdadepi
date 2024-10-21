@@ -1,11 +1,11 @@
 <div class="container">
     <div class="badge">
-        <button mat-raised-button color="warn" matBadge="{{ativo}}">
+        <button (click)="verInativos()" mat-raised-button color="warn" matBadge="{{ativo}}">
             Alunos Ativos
         </button>
     </div>
 
-    <button class="novo mat-elevation-z5" mat-raised-button color="primary">
+    <button routerLink="cadastro" class="novo mat-elevation-z5" mat-raised-button color="primary">
         Novo
     </button>
 
@@ -18,13 +18,13 @@
             </mat-card-header>
 
             <div class="acoes">
-                <button mat-mini-fab color="primary" id="gravar">
+                <button (click)="inativar(item)" mat-mini-fab color="primary" id="gravar">
                     <mat-icon>done</mat-icon>
                 </button>
                 <button mat-mini-fab color="accent" id="editar">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-mini-fab color="warn" id="apagar">
+                <button (click) = "apagar(item.ra)" mat-mini-fab color="warn" id="apagar">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>

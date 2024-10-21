@@ -12,6 +12,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { InativosComponent } from './components/inativos/inativos.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input'
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import {MatSelectModule} from '@angular/material/select'
 
 
 @NgModule({
@@ -20,8 +27,15 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     ReadAllComponent,
+    InativosComponent,
+    CadastroComponent,
   ],
   imports: [
+    MatSelectModule,
+    MatDatepickerModule,
+    MatInputModule,
+    FormsModule,
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
